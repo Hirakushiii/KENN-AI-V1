@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body class="overflow-hidden dark:bg-black h-screen">
+<body class="overflow-x-hidden dark:bg-black">
     <nav class="drawer shadow-lg dark:shadow-gray-800 dark:shadow-md">
         <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col">
@@ -34,7 +34,7 @@
             <div class="hidden flex-none lg:block">
                 <ul class="menu menu-horizontal text-white">
                     <li>
-                        <i class="bi bi-box-arrow-in-left text-xl pt-3 text-red-600 hover:bg-transparent"></i>
+                        <i class="bi bi-box-arrow-in-left text-xl pt-3 text-red-600 hover:bg-transparent" id="logout-btn"></i>
                     </li>
                     <li>
                         <label class="swap swap-rotate hover:bg-transparent">
@@ -55,7 +55,7 @@
             </ul>
         </div>
     </nav>
-    <main class="container mx-auto p-14 overflow-hidden mb-10" id="main">
+    <main class="container mx-auto p-14 overflow-hidden mb-10 h-screen" id="main">
         <h1 class="text-5xl font-semibold pb-5"><span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">Hallo, <span id="name-param"></span></span><br><span class="dark:text-white">Ada yang bisa saya bantu?</span></h1>
         <div class="cards flex flex-nowrap max-sm:overflow-x-scroll max-sm:h-full max-sm:w-full gap-2">
             <div class="card bg-base-100 shadow-xl dark:bg-xx">
@@ -97,12 +97,12 @@
         </div>
     </main>
     <div class="flex container justify-center join mx-auto fixed bottom-0 left-0 right-0 mb-2 dark:bg-black">
-        <input class="input input-bordered rounded-s-2xl join-item w-full shadow-xl focus:ring-0 focus:border-none dark:bg-xx" placeholder="Tuliskan Perintahmu Disini!"/>
-        <button class="btn join-item rounded-r-full bg-none dark:bg-xx dark:border-none">
+        <input class="input input-bordered rounded-s-2xl join-item w-full shadow-xl focus:ring-0 focus:border-none dark:bg-xx dark:text-white" placeholder="Tuliskan Perintahmu Disini!" id="input-query"/>
+        <button class="btn join-item rounded-r-full bg-none dark:bg-xx dark:border-none" id="submit-btn">
             <i class="bi bi-send text-success bg-none"></i>
         </button>
     </div>
-    <script type="module" src="/module.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/script/script.js"></script>
 </body>
 </html>
