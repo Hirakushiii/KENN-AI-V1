@@ -9,4 +9,14 @@
   .bg-xx {
     background-color: rgb(30, 31, 32);
   }
+  body::-webkit-scrollbar {
+    width: 6px !important;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #888 !important; /* Warna thumb */
+  }
+  body {
+    /* scroll-behavior: smooth !important; */
+    scrollbar-color: #f0f0f0 !important;
+  }
 }

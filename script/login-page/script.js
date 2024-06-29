@@ -16,6 +16,6 @@ submit_btn.addEventListener('click', async () =>{
             icon: "error"
         });
     }else{
-        window.location.href = `./app/index.html?n=${nama}`;
+        window.location.href = `./app/index.html?ꦤꦩ=${nama}`;
     }
 })

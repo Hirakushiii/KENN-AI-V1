@@ -716,6 +716,20 @@ html {
   font-family: "Playwrite NG Modern", cursive;
 }
 
+body::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888 !important;
+  /* Warna thumb */
+}
+
+body {
+  /* scroll-behavior: smooth !important; */
+  scrollbar-color: #f0f0f0 !important;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -2421,6 +2435,19 @@ html:has(.drawer-toggle:checked) {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -2451,24 +2478,16 @@ html:has(.drawer-toggle:checked) {
   margin-bottom: -5rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-96 {
-  margin-top: 24rem;
-}
-
-.mb-96 {
-  margin-bottom: 24rem;
 }
 
 .inline-block {
@@ -2489,6 +2508,10 @@ html:has(.drawer-toggle:checked) {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .min-h-full {
@@ -2551,12 +2574,12 @@ html:has(.drawer-toggle:checked) {
   overflow: hidden;
 }
 
-.overflow-x-auto {
-  overflow-x: auto;
-}
-
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.rounded-none {
+  border-radius: 0px;
 }
 
 .rounded-r-full {
@@ -2577,6 +2600,11 @@ html:has(.drawer-toggle:checked) {
 .bg-base-200 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .bg-slate-200 {
@@ -2715,6 +2743,72 @@ html:has(.drawer-toggle:checked) {
 
 .dark\:bg-xx:where(.dark, .dark *) {
   background-color: rgb(30, 31, 32);
+}
+
+@media (hover: hover) {
+  .dark\:btn-primary:where(.dark, .dark *).btn-outline:hover {
+    --tw-text-opacity: 1;
+    color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+  }
+
+  @supports (color: color-mix(in oklab, black, black)) {
+    .dark\:btn-primary:where(.dark, .dark *).btn-outline:hover {
+      background-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+      border-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+    }
+  }
+
+  .dark\:btn-primary:where(.dark, .dark *).btn-outline:hover {
+    --tw-text-opacity: 1;
+    color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+  }
+
+  @supports (color: color-mix(in oklab, black, black)) {
+    .dark\:btn-primary:where(.dark, .dark *).btn-outline:hover {
+      background-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+      border-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+    }
+  }
+}
+
+@supports not (color: oklch(0% 0 0)) {
+  .dark\:btn-primary:where(.dark, .dark *) {
+    --btn-color: var(--fallback-p);
+  }
+}
+
+@supports (color: color-mix(in oklab, black, black)) {
+  .dark\:btn-primary:where(.dark, .dark *).btn-outline.btn-active {
+    background-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+    border-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+  }
+}
+
+.dark\:btn-primary:where(.dark, .dark *) {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+  outline-color: var(--fallback-p,oklch(var(--p)/1));
+}
+
+@supports (color: oklch(0% 0 0)) {
+  .dark\:btn-primary:where(.dark, .dark *) {
+    --btn-color: var(--p);
+  }
+}
+
+.dark\:btn-primary:where(.dark, .dark *).btn-outline {
+  --tw-text-opacity: 1;
+  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+}
+
+.dark\:btn-primary:where(.dark, .dark *).btn-outline.btn-active {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+}
+
+.hover\:bg-red-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-slate-500:hover {

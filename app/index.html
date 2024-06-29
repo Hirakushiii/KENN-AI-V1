@@ -16,7 +16,7 @@
         <div class="drawer-content flex flex-col">
             <div class="navbar dark:bg-gray-950/95 bg-slate-200 w-full">
             <div class="flex-none lg:hidden">
-                <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
+                <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost dark:btn-primary">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -31,10 +31,10 @@
                 </label>
             </div>
             <div class="mx-2 flex-1 px-2 header-font font-medium dark:text-white text-black">Kenn X Gemini AI</div>
-            <div class="hidden flex-none lg:block">
+            <div class=" flex-none ">
                 <ul class="menu menu-horizontal text-white">
-                    <li>
-                        <i class="bi bi-box-arrow-in-left text-xl pt-3 text-red-600 hover:bg-transparent" id="logout-btn"></i>
+                    <li class="hidden lg:block">
+                        <i class="bi bi-box-arrow-in-left text-xl pt-3 text-red-600 hover:bg-transparent logout-btn"></i>
                     </li>
                     <li>
                         <label class="swap swap-rotate hover:bg-transparent">
@@ -49,13 +49,23 @@
         </div>
         <div class="drawer-side z-10">
             <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
-            <ul class="menu bg-base-200 min-h-full w-80 p-4">
-                <li><a>Sidebar Item 1</a></li>
-                <li><a>Sidebar Item 2</a></li>
+            <ul class="menu bg-base-200 min-h-full w-80 p-4 relative dark:bg-black">
+                <li>
+                    <a class="dark:text-white">
+                        <i class="bi bi-instagram"></i>
+                        Instagram
+                    </a>
+                </li>
+                <li class="absolute inset-x-0 bottom-0 w-full mb-2">
+                    <a class="bg-red-700 text-white rounded-none hover:bg-red-500 logout-btn">
+                        <i class="bi bi-box-arrow-in-left"></i>
+                        Logout
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
-    <main class="container mx-auto p-14 overflow-hidden mb-10 h-screen" id="main">
+    <main class="container mx-auto p-14 overflow-hidden mb-20 h-auto" id="main">
         <h1 class="text-5xl font-semibold pb-5"><span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">Hallo, <span id="name-param"></span></span><br><span class="dark:text-white">Ada yang bisa saya bantu?</span></h1>
         <div class="cards flex flex-nowrap max-sm:overflow-x-scroll max-sm:h-full max-sm:w-full gap-2">
             <div class="card bg-base-100 shadow-xl dark:bg-xx">
@@ -63,7 +73,7 @@
                     <h2 class="card-title dark:text-white">Tutorial Memasak</h2>
                     <p class="dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, nostrum?</p>
                     <div class="card-actions justify-end">
-                        <i class="bi bi-pen text-xl hover:bg-slate-500" value="Tutorial Memasak"></i>
+                        <i class="bi bi-pen text-xl hover:bg-slate-500 write-text" value="Tutorial Memasak"></i>
                     </div>
                 </div>
             </div>
@@ -72,7 +82,7 @@
                     <h2 class="card-title dark:text-white">Tips Menjadi Sukses!</h2>
                     <p class="dark:text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, sapiente.</p>
                     <div class="card-actions justify-end">
-                        <i class="bi bi-pen text-xl" value="Tips Menjadi Sukses!"></i>
+                        <i class="bi bi-pen text-xl write-text" value="Tips Menjadi Sukses!"></i>
                     </div>
                 </div>
             </div>
@@ -81,7 +91,7 @@
                     <h2 class="card-title dark:text-white">Cara Mendapatkan Hati Dia?</h2>
                     <p class="dark:text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, esse.</p>
                     <div class="card-actions justify-end">
-                        <i class="bi bi-pen text-xl" value="Cara Mendapatkan Hati Dia?"></i>
+                        <i class="bi bi-pen text-xl write-text" value="Cara Mendapatkan Hati Dia?"></i>
                     </div>
                 </div>
             </div>
@@ -90,14 +100,14 @@
                     <h2 class="card-title dark:text-white">Cara Bolos Tanpa Ketahuan Muktar?</h2>
                     <p class="dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, deserunt.</p>
                     <div class="card-actions justify-end">
-                        <i class="bi bi-pen text-xl" value="Cara Bolos Tanpa Ketahuan Muktar?"></i>
+                        <i class="bi bi-pen text-xl write-text" value="Cara Bolos Tanpa Ketahuan Muktar?"></i>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <div class="flex container justify-center join mx-auto fixed bottom-0 left-0 right-0 mb-2 dark:bg-black">
-        <input class="input input-bordered rounded-s-2xl join-item w-full shadow-xl focus:ring-0 focus:border-none dark:bg-xx dark:text-white" placeholder="Tuliskan Perintahmu Disini!" id="input-query"/>
+        <input class="input input-bordered rounded-s-2xl join-item w-full shadow-xl focus:ring-0 focus:border-none dark:bg-xx dark:text-white" placeholder="Tuliskan Perintahmu Disini!" id="input-query" autocomplete="off"/>
         <button class="btn join-item rounded-r-full bg-none dark:bg-xx dark:border-none" id="submit-btn">
             <i class="bi bi-send text-success bg-none"></i>
         </button>
